@@ -5,7 +5,6 @@ require 'json'
 
 set :public_folder, Proc.new {
   p = 'public'
-  p += '/build/testing' if ENV['RACK_ENV'] == 'production'
   File.join(File.dirname(__FILE__), p)
 }
 
